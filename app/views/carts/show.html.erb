@@ -4,6 +4,11 @@
     <h1>My Cart</h1>
   </header>
 
+  <% if enhanced_cart.empty?%>
+
+      <h2 class="alert alert-warning">Your Jungle cart is empty!</h2>
+      <%= link_to ' continue shopping', :root %>
+  <% else %>
   <div class="panel panel-default items">
     <table class="table table-bordered">
       <thead>
@@ -48,5 +53,5 @@
       <% end %>
     </div>
   </div>
-
+<% end %>
 </section>
