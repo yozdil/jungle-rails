@@ -1,2 +1,32 @@
-<h1>Admin::Dashboard#show</h1>
-<p>Find me in app/views/admin/dashboard/show.html.erb</p>
+<h1>Admin Dashboard</h1>
+
+<div style="background-color: white; text-align: center;
+font-size: 1.5em"
+class="jumbotron">
+
+  <div class="panel panel-primary" style="width: 20%">
+    <div class="panel-heading">Products</div>
+      <button style="font-size: 1.5em; outline: none"class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+        <%= @product_count %>
+      </button>
+      <div class="collapse" id="collapseOne">
+        <div class="panel-body">
+          <%= link_to 'See All Products', [:admin, :products] %>
+        </div>
+      </div>
+  </div>
+  <div class="panel panel-primary" style="width: 20%">
+    <div class="panel-heading">Categories</div>
+      <button style="font-size: 1.5em; outline: none"class="btn btn-link" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+        <%= @category_list.count %>
+      </button>
+      <div class="collapse" id="collapseTwo">
+        <div class="panel-body">
+            <% Category.all.each do |category| %>
+            <%= link_to category.name, category %>
+            <% end %>
+        </div>
+      </div>
+  </div>
+
+</div>
