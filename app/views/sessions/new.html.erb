@@ -1,0 +1,23 @@
+<div style="display: flex;
+align-items: center;
+justify-content:space-evenly
+">
+  <div style="text-align: center">
+    <h1>Login</h1>
+    <h3>to Your <b>Jungle</b> Account</h3>
+    <img src="/login.svg" width="300" height="250">
+  </div>
+
+  <%= form_tag '/login', class: "jumbotron", style: "
+  display: flex;
+  flex-direction: column;
+  width: 30vw;
+  background-color: white
+  " do %>
+
+    Email: <%= text_field_tag :email, "", class: 'form-control' %>
+    Password: <%= password_field_tag :password, "", class: 'form-control' %>
+  <%= submit_tag "Submit", :style => "margin-top: 2em", class: 'btn btn-primary btn-block' %>
+
+  <% end %>
+</div>

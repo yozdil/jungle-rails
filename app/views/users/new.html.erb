@@ -1,0 +1,30 @@
+<div style="display: flex;
+align-items: center;
+justify-content:space-evenly;
+padding: 2em
+">
+  <div style="text-align: center; margin-right: 5em">
+    <h1>Signup!</h1>
+    <h3>Get a <b>Jungle</b> Account</h3>
+    <img src="/register.svg" width="300" height="250">
+  </div>
+
+  <%= form_for :user, url: '/users', 
+    :html => { :style => "
+      display: flex;
+      flex-direction: column;
+      width: 30vw;
+      background-color: white
+      "
+    } do |f| %>
+
+    First Name: <%= f.text_field :first_name, class: 'form-control' %>
+    Last Name: <%= f.text_field :last_name, class: 'form-control' %>
+    Email: <%= f.text_field :email, class: 'form-control' %>
+    Password: <%= f.password_field :password, class: 'form-control' %>
+    Password Confirmation: <%= f.password_field :password_confirmation, class: 'form-control' %>
+    <%= f.submit "Submit", :style => "margin-top: 2em", class: 'btn btn-primary btn-block' %>
+
+  <% end %>
+
+<div>
