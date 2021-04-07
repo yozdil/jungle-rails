@@ -1,7 +1,10 @@
 <div align="center">
 <img height="100px" src="./public/readme-logo.png"/>
 </div>
-A mini e-commerce application built with Rails 4.2. This project was inherited from [Lighthouse Labs](https://github.com/lighthouse-labs/jungle-rails) some new features were added, such as: user authentication, admin-categories, sold-out badge, etc...
+
+A mini e-commerce application built with Rails 4.2. This project was inherited from 
+[Lighthouse Labs](https://github.com/lighthouse-labs/jungle-rails)
+some new features were added, such as: user authentication, admin-categories, sold-out badge, etc...
 
 ## Jungle in Action
 
